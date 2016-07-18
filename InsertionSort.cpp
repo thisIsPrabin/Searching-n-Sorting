@@ -21,7 +21,7 @@ class InsertionSort {
 		}
 			
 		for(int i=0; i<length; i++){
-			printf("%d\t", array[i]);
+			cout << array[i] << "\t";
 		}
 	}
 };
