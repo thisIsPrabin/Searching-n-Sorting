@@ -1,8 +1,5 @@
 import java.util.Scanner;
-
 class QuickSort {
-	
-	int count = 0;
 
 	public int partition(int array[], int low, int high){
 		
@@ -17,7 +14,6 @@ class QuickSort {
 				array[i] = array[j];
 				array[j] = temp;
 			}
-			count++;
 		}
 		
 		int temp = array[i+1];
@@ -45,25 +41,21 @@ class QuickSort {
 		System.out.println();
 	}
 	
-	public void printCount(){
-		System.out.println(count);
-	}
-	
 	public static void main(String...strings){
 		
 		Scanner in = new Scanner(System.in);
-        QuickSort ob = new QuickSort();
-        
-        int size = in.nextInt();
-        int[] arr = new int[size];
-        
-        for(int i=0; i<size; i++){
-        	arr[i] = in.nextInt();
-        }
-        
-        ob.sort(arr, 0, size-1);
-        
-        printArray(arr, 0, size);
-        in.close();
+	        QuickSort ob = new QuickSort();
+	        
+	        int size = in.nextInt();
+	        int[] arr = new int[size];
+	        
+	        for(int i=0; i<size; i++){
+	        	arr[i] = in.nextInt();
+	        }
+	        
+	        ob.sort(arr, 0, size-1);
+	        
+	        printArray(arr, 0, size);
+	        in.close();
 	}
 }
